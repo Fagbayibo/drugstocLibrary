@@ -113,7 +113,7 @@ const App: React.FC = () => {
               </button>
             </div>
             {/* Hamburger Menu */}
-            <div className=" p-3 bg-white/10 backdrop-blur-md rounded-xl shadow-md cursor-pointer">
+            <div className="hidden md:flex  p-3 bg-white/10 backdrop-blur-md rounded-xl shadow-md cursor-pointer">
               <RxHamburgerMenu className="text-[#5AAEFF]" size={24} />
             </div>
           </div>
@@ -128,7 +128,7 @@ const App: React.FC = () => {
               <h2 className="font-poppins tracking-tight font-bold text-xl">
                 Latest Books
               </h2>
-              <div className="flex gap-3">
+              <div className="flex md:gap-3 gap-1">
                 {categories.map((category, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <button onClick={() => setSelectedCategory(category)} className={` cursor-pointerfont-poppins tracking-tight md:text-lg text-sm px-4 py-2 rounded-full 
@@ -146,16 +146,16 @@ const App: React.FC = () => {
          )}
           </div>
 
-          {/* Book Grid */}
-          <div className="grid md:grid-cols-5 grid-cols-2 gap-3 md:gap-6 md:px-14 px-3 mt-6">
-            {currentBooks.map((book) => (
-              <BookCard
-                key={book.id}
-                image={book.image}
-                onClick={() => setSelectedBook(book)}
-              />
-            ))}
-          </div>
+      {/* Book Grid */}
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 px-3 md:px-14 mt-6">
+  {currentBooks.map((book) => (
+    <BookCard
+      key={book.id}
+      image={book.image}
+      onClick={() => setSelectedBook(book)}
+    />
+  ))}
+</div>
 
           {/* Pagination */}
           {filteredBooks.length > booksPerPage && (
