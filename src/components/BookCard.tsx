@@ -5,8 +5,7 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ image, onClick }) => {
   return (
-    <div
-      className="relative w-[180px] md:w-[250px] xl:w-[300px] h-[300px] bg-white shadow-md rounded-lg cursor-pointer overflow-hidden group"
+<div className="relative w-full h-auto bg-white shadow-md rounded-lg cursor-pointer overflow-hidden group"
       onClick={onClick}
       aria-label="View book details"
     >
