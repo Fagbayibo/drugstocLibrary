@@ -147,7 +147,8 @@ const App: React.FC = () => {
           </div>
 
       {/* Book Grid */}
-<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 px-3 md:px-14 mt-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4 px-2 md:px-14 mt-6">
+
   {currentBooks.map((book) => (
     <BookCard
       key={book.id}
