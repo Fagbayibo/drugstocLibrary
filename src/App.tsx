@@ -91,7 +91,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <div className="max-w-full min-h-screen">
+      <div className="max-w-full min-h-screen overflow-hidden">
         {/* Navigation with search bar */}
         <div>
           <div className="flex items-center justify-between px-2 md:px-14 py-6 w-full border-b-2 border-gray-100">
