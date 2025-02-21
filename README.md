@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# Drug Stoc
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Drug Stoc is a book search and library web application that allows users to browse books, search by title or author, and view detailed book descriptions.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Search for books by title, author, or category
+- View detailed book descriptions
+- Pagination for browsing books
+- Responsive design with Tailwind CSS
+- End-to-end testing with Cypress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Setup & Installation
 
-## Expanding the ESLint configuration
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/drug-stoc.git
+cd drug-stoc
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ Install Dependencies
+```bash
+npm install  # or yarn install
 ```
+
+### 3️⃣ Start the Development Server
+```bash
+npm run dev  # or yarn dev
+```
+The app should now be running at `http://localhost:5173`
+
+## 🧪 Running Cypress Tests
+Cypress is used for end-to-end testing.
+
+### 1️⃣ Install Cypress
+```bash
+npm install cypress --save-dev  # or yarn add cypress --dev
+```
+
+### 2️⃣ Open Cypress Test Runner
+```bash
+npx cypress open  # or yarn cypress open
+```
+This will launch the Cypress UI where you can select and run tests.
+
+### 3️⃣ Run Tests in Headless Mode
+```bash
+npx cypress run  # or yarn cypress run
+```
+This runs all tests in the terminal without opening the UI.
+
+## 📂 Project Structure
+```
+Drug Stoc/
+│── src/
+│   ├── components/       # Reusable React components
+│   ├── services/         # API service functions
+│   ├── utils/            # Utility functions
+│── cypress/              # Cypress test files
+│── public/               # Static assets
+│── package.json          # Project dependencies
+│── README.md             # Project documentation
+```
+
+
+---
+### 🎉 Happy Coding! 🚀
+
